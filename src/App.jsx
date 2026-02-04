@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./Components/ScrollToTop";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
