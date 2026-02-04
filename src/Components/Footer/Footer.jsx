@@ -1,6 +1,6 @@
 import "./Footer.css";
 import { FaFacebookF, FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
-import logo from "../../assets/logo.jfif"; // apna logo yaha rakho
+import logo from "../../assets/logo.png"; // apna logo yaha rakho
 
 const Footer = () => {
   return (
