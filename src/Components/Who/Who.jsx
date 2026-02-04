@@ -1,5 +1,5 @@
 import React from "react";
-import "./who.css";
+import "./Who.css";
 
 const Who = () => {
   return (
