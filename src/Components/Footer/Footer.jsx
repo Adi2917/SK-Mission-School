@@ -16,9 +16,9 @@ const Footer = () => {
           </p>
 
           <div className="footer-social">
-            <a href="https://facebook.com" target="_blank"><FaFacebookF /></a>
-            <a href="https://wa.me/919470466665" target="_blank"><FaWhatsapp /></a>
-            <a href="https://instagram.com" target="_blank"><FaInstagram /></a>
+            <a href="https://www.facebook.com/SKmissionschool1995/" target="_blank"><FaFacebookF /></a>
+            <a href="https://wa.me/8116360090" target="_blank"><FaWhatsapp /></a>
+            <a href="https://www.instagram.com/s.k_mission?igsh=Y3U2dThhZTN5czA1" target="_blank"><FaInstagram /></a>
             <a href="mailto:contact@skmissionschool.edu.in"><FaEnvelope /></a>
           </div>
         </div>
@@ -43,7 +43,7 @@ const Footer = () => {
             📍 Kamal Deo Path, Rajnikant Colony,<br />
             Rajni Chowk, Purnia, Bihar 854301
           </p>
-          <p>📞 094704 66665</p>
+          <p>📞 8116360090</p>
           <p>✉️ contact@skmissionschool.edu.in</p>
         </div>
 

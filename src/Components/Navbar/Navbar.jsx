@@ -39,7 +39,7 @@ const Navbar = () => {
 
           <div className="notification-body">
             {/* Future notifications yaha add karna */}
-            {/* <p>No notifications available yet</p> */}
+            {<p>No notifications available yet</p> }
           </div>
         </div>
       )}
@@ -66,8 +66,8 @@ const Navbar = () => {
 
             {/* MOBILE CONTACT */}
             <div className="sk-mobile-contact">
-              <a href="tel:09470466665" className="phone"><HiOutlinePhone /></a>
-              <a href="https://wa.me/919470466665" target="_blank" className="whatsapp">
+              <a href="tel:8116360090" className="phone"><HiOutlinePhone /></a>
+              <a href="https://wa.me/8116360090" target="_blank" className="whatsapp">
                 <RiWhatsappLine />
               </a>
             </div>
@@ -82,12 +82,12 @@ const Navbar = () => {
               <HiOutlineBell />
             </span>
 
-            <a href="tel:09470466665" className="phone">
+            <a href="tel:8116360090" className="phone">
               <HiOutlinePhone />
             </a>
 
             <a
-              href="https://wa.me/919470466665"
+              href="https://wa.me/8116360090"
               target="_blank"
               className="whatsapp"
             >
