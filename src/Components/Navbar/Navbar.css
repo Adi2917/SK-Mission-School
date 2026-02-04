@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== HEADER ===== */
+.sk-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== NAVBAR ===== */
+.sk-navbar {
+  max-width: 1400px;
+  margin: auto;
+  padding: 14px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== BRAND ===== */
+.sk-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sk-brand img {
+  height: 70px;
+}
+
+.brand-text h1 {
+  font-size: 26px;
+  color: #0b2c45;
+}
+
+.brand-text span {
+  font-size: 12px;
+  color: #7a8a99;
+}
+
+/* ===== MENU ===== */
+.sk-menu {
+  list-style: none;
+  display: flex;
+  gap: 34px;
+}
+
+.sk-menu li a {
+  text-decoration: none;
+  color: #0b2c45;
+  font-weight: 500;
+  position: relative;
+}
+
+.sk-menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: linear-gradient(90deg, #f9c74f, #f9844a);
+  transition: 0.3s;
+}
+
+.sk-menu li a:hover::after,
+.sk-menu li a.active::after {
+  width: 100%;
+}
+
+/* ===== ICONS ===== */
+.sk-contact {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.sk-contact a,
+.notification-icon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* highlighted */
+.notification-icon {
+  color: #f9844a;
+  filter: drop-shadow(0 0 6px rgba(249,132,74,0.7));
+}
+
+.notification-icon:hover {
+  transform: scale(1.15);
+}
+
+.phone { color: #0b5ed7; }
+.whatsapp { color: #25d366; }
+
+/* ===== TOGGLE ===== */
+.sk-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+.sk-mobile-contact {
+  display: none;
+  gap: 24px;
+}
+
+/* ===== NOTIFICATION ===== */
+.notification-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+}
+
+.notification-panel {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  z-index: 2100;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-header h3 {
+  font-size: 16px;
+  color: #0b2c45;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.notification-divider {
+  height: 1px;
+  background: #e6e6e6;
+  margin: 14px 0;
+}
+
+.notification-body {
+  min-height: 60px;
+  font-size: 14px;
+  color: #7a8a99;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .sk-menu {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    gap: 22px;
+    padding: 28px 0;
+    display: none;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+  }
+
+  .sk-menu.open {
+    display: flex;
+  }
+
+  .sk-toggle {
+    display: block;
+  }
+
+  .sk-mobile-contact {
+    display: flex;
+  }
+}
