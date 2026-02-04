@@ -1,0 +1,101 @@
+/* Message Section */
+.message-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f7f7fc 0%, #e6e6f8 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+.message-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Message Card */
+.message-card {
+  flex: 1 1 500px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.message-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+
+.message-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Heading & Name */
+.message-title {
+  font-size: 2rem;
+  color: #5b2a86; /* professional premium purple */
+  font-weight: 700;
+  margin: 15px 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.message-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Image */
+.message-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #5b2a86;
+  box-shadow: 0 5px 15px rgba(91, 42, 134, 0.3);
+}
+
+/* Paragraph */
+.message-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #555;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .message-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .message-card {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .message-title {
+    font-size: 1.6rem;
+  }
+  .message-img {
+    width: 130px;
+    height: 130px;
+  }
+  .message-name {
+    font-size: 1.1rem;
+  }
+  .message-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
