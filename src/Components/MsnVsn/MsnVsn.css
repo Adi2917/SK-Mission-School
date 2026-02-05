@@ -1,0 +1,125 @@
+.mv-section {
+  padding: 80px 20px;
+  background: #f9fbfd;
+}
+
+.mv-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 260px 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Center Image */
+.mv-center img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  background: #fff;
+  padding: 10px;
+}
+
+/* Box Common */
+.mv-box {
+  position: relative;
+  background: #ffffff;
+  padding: 30px 28px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.mv-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #0b2c45;
+}
+
+.mv-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Icons */
+.mv-icon {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+/* Mission */
+.mission .mv-icon {
+  background: #e8f0fe;
+  color: #1a73e8;
+}
+
+/* Vision */
+.vision {
+  background: linear-gradient(135deg, #fff1e6, #ffe0c7);
+}
+
+.vision .mv-icon {
+  background: #ffffff;
+  color: #e65100;
+}
+
+/* Connecting Lines */
+.mv-line {
+  position: absolute;
+  top: 50%;
+  width: 70px;
+  height: 2px;
+  background: linear-gradient(90deg, #ccc, #999);
+}
+
+.mv-line.left {
+  right: -70px;
+}
+
+.mv-line.right {
+  left: -70px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .mv-wrapper {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
+  }
+
+  .mv-line {
+    display: none;
+  }
+
+  .mv-center img {
+    max-width: 280px;
+    margin: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .mv-section {
+    padding: 60px 15px;
+  }
+
+  .mv-content h2 {
+    font-size: 21px;
+  }
+
+  .mv-content p {
+    font-size: 14.5px;
+  }
+}

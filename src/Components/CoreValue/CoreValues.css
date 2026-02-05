@@ -1,0 +1,124 @@
+.core-values-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADING */
+.core-heading {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.core-heading h2 {
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+  color: #0b2c45;
+  margin-bottom: 12px;
+}
+
+.core-heading p {
+  font-size: 15px;
+  color: #6b7c8a;
+  line-height: 1.7;
+}
+
+/* GRID */
+.core-values-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid #e6ecf1;
+  border-bottom: 1px solid #e6ecf1;
+}
+
+/* SINGLE VALUE */
+.core-value {
+  padding: 40px 25px;
+  text-align: center;
+  position: relative;
+}
+
+/* vertical divider */
+.core-value:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: #e6ecf1;
+}
+
+/* ICON */
+.core-icon {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+/* icon colors */
+.discipline {
+  color: #f9c74f;
+}
+
+.integrity {
+  color: #43aa8b;
+}
+
+.respect {
+  color: #577590;
+}
+
+.excellence {
+  color: #f3722c;
+}
+
+.responsibility {
+  color: #277da1;
+}
+
+/* TEXT */
+.core-value h3 {
+  font-size: 18px;
+  color: #0b2c45;
+  margin-bottom: 10px;
+}
+
+.core-value p {
+  font-size: 14px;
+  color: #6b7c8a;
+  line-height: 1.6;
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 1100px) {
+  .core-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .core-value::after {
+    display: none;
+  }
+
+  .core-value {
+    border-bottom: 1px solid #e6ecf1;
+  }
+}
+
+@media (max-width: 600px) {
+  .core-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .core-value {
+    border-bottom: 1px solid #e6ecf1;
+  }
+
+  .core-heading h2 {
+    font-size: 28px;
+  }
+}
