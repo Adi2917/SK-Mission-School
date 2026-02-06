@@ -1,5 +1,5 @@
 import "./AcdHero.css";
-import heroImg from "../../assets/acdhero.webp"; // image yahan rakhna
+import heroImg from "../../assets/acdhero.jpg"; // image yahan rakhna
 
 const AcdHero = () => {
   return (
