@@ -1,58 +1,67 @@
 import { useState } from "react";
 import "./AdmsnHero.css";
-import admissionImg from "../../assets/admsopen.png";
 
 const AdmsnHero = () => {
   const [showForm, setShowForm] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
     const form = e.target;
 
     const data = {
-      fullName: form.fullName.value,
-      fatherName: form.fatherName.value,
-      mobile: form.mobile.value,
-      email: form.email.value,
-      address: form.address.value,
+      fullName: form.fullName.value.trim(),
+      fatherName: form.fatherName.value.trim(),
+      mobile: form.mobile.value.trim(),
+      email: form.email.value.trim(),
+      address: form.address.value.trim(),
       className: form.className.value,
+      dateTime: new Date().toLocaleString(),
     };
 
-    await fetch("https://script.google.com/macros/s/AKfycbyRwpG8oqNDIFzWc0T7wQVibuG5hv4TdDV6R0WzLHk-LX5nXrZRrHUKfyUeyKRhjlzqyQ/exec", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
+    /* ✅ TURANT RESPONSE (FAST UX) */
+    alert(
+      "Thank you for filling the form.\nPlease wait for our call and message."
+    );
 
-    alert("Thank you for filling the form. Please wait for our call and message.");
     form.reset();
     setShowForm(false);
+
+    /* 🔥 Background save – NO WAIT */
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyRwpG8oqNDIFzWc0T7wQVibuG5hv4TdDV6R0WzLHk-LX5nXrZRrHUKfyUeyKRhjlzqyQ/exec",
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+      }
+    ).catch((err) => {
+      console.log("Sheet save error:", err);
+    });
   };
 
   return (
     <>
       {/* HERO */}
-      <section
-        className="admission-hero"
-        style={{ backgroundImage: `url(${admissionImg})` }}
-      >
-        <div className="admission-overlay">
-          <div className="admission-text">
-            <h1>
-              Admission <span>Open</span>
-            </h1>
-            <p>
-              Secure your child’s future with quality education at
-              <strong> S.K. Mission School</strong>.
-            </p>
-            <p className="sub">
-              You can fill the admission form by clicking the button below.
-            </p>
+      <section className="admission-hero">
+        <div className="balloons">
+          <span className="balloon b1"></span>
+          <span className="balloon b2"></span>
+          <span className="balloon b3"></span>
+          <span className="balloon b4"></span>
+        </div>
 
-            <button onClick={() => setShowForm(true)}>
-              Apply for Admission
-            </button>
-          </div>
+        <div className="admission-content">
+          <h1>
+            Admission <span>Open</span>
+          </h1>
+
+          <p className="tagline">
+            Build your child’s future with quality education, discipline and
+            values at <strong>S.K. Mission School</strong>.
+          </p>
+
+          <button onClick={() => setShowForm(true)}>
+            Apply for Admission
+          </button>
         </div>
       </section>
 
@@ -60,20 +69,39 @@ const AdmsnHero = () => {
       {showForm && (
         <div className="form-overlay">
           <div className="form-box">
-            <span className="close" onClick={() => setShowForm(false)}>×</span>
+            <span className="close" onClick={() => setShowForm(false)}>
+              ×
+            </span>
+
             <h2>Admission Form</h2>
 
             <form onSubmit={handleSubmit}>
-              <input name="fullName" placeholder="Student Full Name" required />
-              <input name="fatherName" placeholder="Father's Name" required />
-
               <input
-                name="mobile"
-                placeholder="Mobile Number"
-                pattern="[0-9]{10}"
+                name="fullName"
+                placeholder="Student Full Name"
                 required
               />
 
+              <input
+                name="fatherName"
+                placeholder="Father's Name"
+                required
+              />
+
+              {/* 🔒 ONLY NUMBER – EXACT 10 DIGIT */}
+              <input
+                name="mobile"
+                placeholder="Mobile Number"
+                inputMode="numeric"
+                maxLength="10"
+                pattern="[0-9]{10}"
+                onInput={(e) =>
+                  (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
+                }
+                required
+              />
+
+              {/* 🔒 EMAIL WITH @ CHECK */}
               <input
                 name="email"
                 type="email"
