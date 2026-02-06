@@ -12,7 +12,7 @@ const Class = () => {
         <p>
           We provide quality English-medium education with a strong academic
           foundation, modern teaching methods, and a caring learning
-          environment for every child.
+          environment fof every child.
         </p>
       </div>
 
