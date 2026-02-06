@@ -1,0 +1,98 @@
+.fclt-end {
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(
+      rgba(12, 18, 28, 0.85),
+      rgba(12, 18, 28, 0.85)
+    ),
+    url("../../assets/facility-end.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.fclt-end-content {
+  max-width: 900px;
+  text-align: center;
+  color: #eaeaea;
+}
+
+.fclt-end-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.fclt-end-content h2 span {
+  color: #4fd1c5; /* teal accent */
+}
+
+.fclt-end-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #d6d6d6;
+}
+
+.fclt-end-highlights {
+  margin: 45px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.fclt-end-highlights div {
+  text-align: center;
+}
+
+.fclt-end-highlights h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffd166; /* golden accent */
+  margin-bottom: 8px;
+}
+
+.fclt-end-highlights span {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #4fd1c5, #ffd166);
+  border-radius: 5px;
+}
+
+.fclt-end-quote {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fclt-end-quote p {
+  font-size: 18px;
+  font-style: italic;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fclt-end {
+    padding: 60px 16px;
+  }
+
+  .fclt-end-content h2 {
+    font-size: 32px;
+  }
+
+  .fclt-end-content p {
+    font-size: 16px;
+  }
+
+  .fclt-end-highlights {
+    gap: 25px;
+  }
+}
