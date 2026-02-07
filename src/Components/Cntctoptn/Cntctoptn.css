@@ -1,0 +1,113 @@
+/* SECTION */
+.cntct-option-section {
+  padding: 80px 60px;
+  background: #ffffff;
+}
+
+/* HEADER */
+.cntct-option-head {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.cntct-option-head h2 {
+  font-size: 34px;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.cntct-option-head p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* GRID */
+.cntct-option-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.cntct-card {
+  background: #f8fafc;
+  padding: 32px 26px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.cntct-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ICON */
+.cntct-card svg {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+/* TITLE */
+.cntct-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+/* TEXT */
+.cntct-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* UNIQUE COLORS */
+.phone svg {
+  color: #2563eb;
+}
+
+.whatsapp svg {
+  color: #22c55e;
+}
+
+.email svg {
+  color: #dc2626;
+}
+
+.instagram svg {
+  color: #e1306c;
+}
+
+.facebook svg {
+  color: #1877f2;
+}
+
+.linkedin svg {
+  color: #0a66c2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cntct-option-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cntct-option-section {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cntct-option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cntct-option-head h2 {
+    font-size: 26px;
+  }
+}
