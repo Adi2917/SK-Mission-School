@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./Cntctend.css";
+import "./CntctEnd.css";
 import { FaMapMarkerAlt, FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
-const Cntctend = () => {
+const CntctEnd = () => {
   const [toast, setToast] = useState({ show: false, type: "", msg: "" });
 
   const showToast = (type, msg) => {
@@ -13,12 +13,12 @@ const Cntctend = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // ✅ INSTANT POPUP (NO WAIT)
+    // ✅ INSTANT POPUP (NO DELAY)
     showToast("success", "Thank you! We will contact you soon.");
 
     const formData = new FormData(e.target);
 
-    // 🔥 BACKGROUND SAVE
+    // 🔥 BACKGROUND SAVE (NO WAIT)
     fetch(
       "https://script.google.com/macros/s/AKfycbzD7eTQE_xXOYU808dxfHZ01y4SRSFG87Czv8UPkFgN0DcGkJHHUjTUvo2Q9dQulI-5oA/exec",
       {
@@ -34,7 +34,7 @@ const Cntctend = () => {
 
   return (
     <>
-      {/* POPUP */}
+      {/* TOAST */}
       {toast.show && (
         <div className={`toast ${toast.type}`}>
           {toast.type === "success" ? <FaCheckCircle /> : <FaTimesCircle />}
@@ -54,6 +54,7 @@ const Cntctend = () => {
               <FaMapMarkerAlt />
               <span>View School Location on Map</span>
             </div>
+
             <iframe
               title="School Map"
               src="https://maps.google.com/maps?q=25.7900196,87.4848842&z=15&output=embed"
@@ -110,4 +111,4 @@ const Cntctend = () => {
   );
 };
 
-export default Cntctend;
+export default CntctEnd;

@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
 import CntctHero from '../Components/CntctHero/CntctHero'
 import Cntctoptn from '../Components/Cntctoptn/Cntctoptn'
-import Cntctend from '../Components/Cntctend/Cntctend.jsx'
+import CntctEnd from '../Components/Cntctend/Cntctend'
 
 const Contact = () => {
   return (
@@ -11,7 +11,7 @@ const Contact = () => {
         <Navbar />
         <CntctHero />
         <Cntctoptn />
-        <Cntctend />
+        <CntctEnd />
         <Footer />
     </div>
   )
