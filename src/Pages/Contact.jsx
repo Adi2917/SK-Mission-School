@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
 import CntctHero from '../Components/CntctHero/CntctHero'
 import Cntctoptn from '../Components/Cntctoptn/Cntctoptn'
-import CntctEnd from '../Components/Cntctend/Cntctend'
+import CntctEnd from '../Components/CntctEnd/CntctEnd.jsx'
 
 const Contact = () => {
   return (
