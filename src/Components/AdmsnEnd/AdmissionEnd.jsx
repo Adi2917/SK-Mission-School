@@ -27,7 +27,7 @@ const AdmissionEnd = () => {
     const formData = new FormData(e.target);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbw0iMbtZwQ8O_Xe_bCuCl7-OZ4of3BB3s-gV_uBHEAyOdmq47GpTboS6IwppURFuX5G/exec",
+      "https://script.google.com/macros/s/AKfycbzJEINpK3h7kHjPNukHTUYe2wdEJIrZYgD3TO2HHcbwQ8SCW3LQDMUk9ixdhx1tskWr/exec",
       { method: "POST", body: formData }
     ).catch(() => showToast("error", "Something went wrong!"));
 
