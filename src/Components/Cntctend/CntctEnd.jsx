@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./CntctEnd.css";
+import "./Cntctend.css";
 import { FaMapMarkerAlt, FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
-const CntctEnd = () => {
+const Cntctend = () => {
   const [toast, setToast] = useState({ show: false, type: "", msg: "" });
 
   const showToast = (type, msg) => {
@@ -110,4 +110,4 @@ const CntctEnd = () => {
   );
 };
 
-export default CntctEnd;
+export default Cntctend;
