@@ -46,7 +46,7 @@ const CntctLast = () => {
         {/* MAP */}
         <div className="map-box">
           <a
-            href="https://www.google.com/maps?q=25.770861,87.4844006"
+            href="https://www.google.com/maps?q=25.7817,87.4745"
             target="_blank"
             rel="noreferrer"
           >
@@ -57,7 +57,7 @@ const CntctLast = () => {
 
             <iframe
               title="School Map"
-              src="https://maps.google.com/maps?q=25.770861,87.4844006&z=15&output=embed"
+              src="https://maps.google.com/maps?q=25.7817,87.4745&z=15&output=embed"
               loading="lazy"
             ></iframe>
           </a>
