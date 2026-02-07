@@ -3,6 +3,7 @@ import "./AdmsnHero.css";
 
 const AdmsnHero = () => {
   const [showForm, setShowForm] = useState(false);
+  const [toast, setToast] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,28 +19,33 @@ const AdmsnHero = () => {
       dateTime: new Date().toLocaleString(),
     };
 
-    /* ✅ TURANT RESPONSE (FAST UX) */
-    alert(
-      "Thank you for filling the form.\nPlease wait for our call and message."
-    );
+    /* ✅ BEAUTIFUL POPUP (NO DELAY) */
+    setToast(true);
+    setTimeout(() => setToast(false), 3000);
 
     form.reset();
     setShowForm(false);
 
-    /* 🔥 Background save – NO WAIT */
+    /* 🔥 Background Google Sheet save */
     fetch(
       "https://script.google.com/macros/s/AKfycbyRwpG8oqNDIFzWc0T7wQVibuG5hv4TdDV6R0WzLHk-LX5nXrZRrHUKfyUeyKRhjlzqyQ/exec",
       {
         method: "POST",
         body: JSON.stringify(data),
       }
-    ).catch((err) => {
-      console.log("Sheet save error:", err);
-    });
+    ).catch(() => {});
   };
 
   return (
     <>
+      {/* 🔔 TOP POPUP */}
+      {toast && (
+        <div className="toast-popup">
+          ✅ Form submitted successfully! <br />
+          Please wait for our call & message.
+        </div>
+      )}
+
       {/* HERO */}
       <section className="admission-hero">
         <div className="balloons">
@@ -76,23 +82,12 @@ const AdmsnHero = () => {
             <h2>Admission Form</h2>
 
             <form onSubmit={handleSubmit}>
-              <input
-                name="fullName"
-                placeholder="Student Full Name"
-                required
-              />
+              <input name="fullName" placeholder="Student Full Name" required />
+              <input name="fatherName" placeholder="Father's Name" required />
 
-              <input
-                name="fatherName"
-                placeholder="Father's Name"
-                required
-              />
-
-              {/* 🔒 ONLY NUMBER – EXACT 10 DIGIT */}
               <input
                 name="mobile"
                 placeholder="Mobile Number"
-                inputMode="numeric"
                 maxLength="10"
                 pattern="[0-9]{10}"
                 onInput={(e) =>
@@ -101,7 +96,6 @@ const AdmsnHero = () => {
                 required
               />
 
-              {/* 🔒 EMAIL WITH @ CHECK */}
               <input
                 name="email"
                 type="email"

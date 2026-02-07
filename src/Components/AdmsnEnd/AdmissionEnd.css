@@ -4,6 +4,7 @@
   gap: 40px;
   padding: 60px;
   background: #f9fafb;
+  align-items: flex-start;
 }
 
 /* LEFT */
@@ -41,11 +42,6 @@
   color: #2563eb;
 }
 
-.feature-card h4 {
-  margin: 10px 0 6px;
-  color: #111;
-}
-
 /* RIGHT */
 .admission-form {
   flex: 1;
@@ -71,7 +67,6 @@
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #d1d5db;
-  font-size: 14px;
 }
 
 .admission-form button {
@@ -81,15 +76,10 @@
   border: none;
   padding: 13px;
   border-radius: 10px;
-  font-size: 15px;
   cursor: pointer;
 }
 
-.admission-form button:hover {
-  background: #1e40af;
-}
-
-/* 🔥 TOP TOAST */
+/* 🔥 TOAST */
 .toast {
   position: fixed;
   top: 20px;
@@ -98,29 +88,28 @@
   padding: 14px 22px;
   border-radius: 10px;
   display: flex;
-  align-items: center;
   gap: 10px;
   color: #fff;
-  font-weight: 500;
   z-index: 9999;
-  animation: drop 0.3s ease;
 }
 
-.toast.success {
-  background: #16a34a;
-}
+.toast.success { background: #16a34a; }
+.toast.error { background: #dc2626; }
 
-.toast.error {
-  background: #dc2626;
-}
-
-@keyframes drop {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -20px);
+/* 📱 RESPONSIVE */
+@media (max-width: 900px) {
+  .admission-section {
+    flex-direction: column;
+    padding: 40px 20px;
   }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admission-form {
+    width: 100%;
   }
 }
+ 
+
